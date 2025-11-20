@@ -336,8 +336,12 @@
     <Preference
             android:key="label_version"
             android:title="@string/title_version"
-      android:summary="1.0.0-By-StringManolo"  <!--"@string/auto_version" -->
+            android:summary="1.0.0-By-StringManolo"
             />
+            <!--"@string/auto_version" -->
+            
+
+             
     </PreferenceCategory>
 
 </PreferenceScreen>
