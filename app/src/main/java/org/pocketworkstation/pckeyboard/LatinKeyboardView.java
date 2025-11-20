@@ -153,21 +153,22 @@ public class LatinKeyboardView extends LatinKeyboardBaseView {
                 break;
             }
         }*//* Patch */
-        if (attr == R.styleable.LatinKeyboardBaseView_keyPreviewLayout) {
-    int previewLayout = a.getResourceId(attr, 0);
-    if (previewLayout == R.layout.null_layout) {
-        previewLayout = 0;
-    }
-} else if (attr == R.styleable.LatinKeyboardBaseView_keyPreviewOffset) {
-    mPreviewOffset = a.getDimensionPixelOffset(attr, 0);
-} else if (attr == R.styleable.LatinKeyboardBaseView_keyPreviewHeight) {
-    mPreviewHeight = a.getDimensionPixelSize(attr, 80);
-} else if (attr == R.styleable.LatinKeyboardBaseView_popupLayout) {
-    mPopupLayout = a.getResourceId(attr, 0);
-    if (mPopupLayout == R.layout.null_layout) {
-        mPopupLayout = 0;
-    }
-} 
+            if (attr == R.styleable.LatinKeyboardBaseView_keyPreviewLayout) {
+              int previewLayout = a.getResourceId(attr, 0);
+              if (previewLayout == R.layout.null_layout) {
+                previewLayout = 0;
+              }
+            } else if (attr == R.styleable.LatinKeyboardBaseView_keyPreviewOffset) {
+              mPreviewOffset = a.getDimensionPixelOffset(attr, 0);
+            } else if (attr == R.styleable.LatinKeyboardBaseView_keyPreviewHeight) {
+              mPreviewHeight = a.getDimensionPixelSize(attr, 80);
+            } else if (attr == R.styleable.LatinKeyboardBaseView_popupLayout) {
+              mPopupLayout = a.getResourceId(attr, 0);
+              if (mPopupLayout == R.layout.null_layout) {
+                mPopupLayout = 0;
+              }
+            }
+          }
 
         final Resources res = getResources();
 
