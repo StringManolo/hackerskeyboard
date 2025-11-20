@@ -1,21 +1,25 @@
+plugins {
+    id 'com.android.application'
+}
+
 android {
-    compileSdkVersion 33 
-    
+    compileSdkVersion 33
+
     defaultConfig {
         applicationId 'org.pocketworkstation.pckeyboard'
-        minSdkVersion 14 
-        targetSdkVersion 33 
+        minSdkVersion 14
+        targetSdkVersion 33
         versionCode 1041001
         versionName "v1.41.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        
+
         externalNativeBuild {
             cmake {
                 cppFlags ""
             }
         }
     }
-    
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
@@ -27,16 +31,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    
+
     externalNativeBuild {
         cmake {
             path "CMakeLists.txt"
         }
     }
-    
+
     productFlavors {
     }
-    
+
     lintOptions {
         checkReleaseBuilds false
     }
@@ -44,10 +48,10 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    
+
     implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation "androidx.core:core-ktx:1.9.0" 
+    implementation "androidx.core:core-ktx:1.9.0"
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test:runner:1.5.2' 
+    androidTestImplementation 'androidx.test:runner:1.5.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
