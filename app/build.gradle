@@ -3,6 +3,7 @@ plugins {
 }
 
 android {
+    namespace 'org.pocketworkstation.pckeyboard'
     compileSdkVersion 33
 
     defaultConfig {
