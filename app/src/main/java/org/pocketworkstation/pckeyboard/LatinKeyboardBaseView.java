@@ -486,7 +486,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
         int n = a.getIndexCount();
         for (int i = 0; i < n; i++) {
             int attr = a.getIndex(i);
-
+            /* Port Java 11 
             switch (attr) {
             case R.styleable.LatinKeyboardBaseView_keyBackground:
                 mKeyBackground = a.getDrawable(attr);
@@ -551,6 +551,52 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 break;
             }
         }
+        *//* Patch */
+    if (attr == R.styleable.LatinKeyboardBaseView_keyBackground) {
+        mKeyBackground = a.getDrawable(attr);
+    } else if (attr == R.styleable.LatinKeyboardBaseView_keyHysteresisDistance) {
+        mKeyHysteresisDistance = a.getDimensionPixelOffset(attr, 0);
+    } else if (attr == R.styleable.LatinKeyboardBaseView_verticalCorrection) {
+        mVerticalCorrection = a.getDimensionPixelOffset(attr, 0);
+    } else if (attr == R.styleable.LatinKeyboardBaseView_keyTextSize) {
+        mKeyTextSize = a.getDimensionPixelSize(attr, 18);
+    } else if (attr == R.styleable.LatinKeyboardBaseView_keyTextColor) {
+        mKeyTextColor = a.getColor(attr, 0xFF000000);
+    } else if (attr == R.styleable.LatinKeyboardBaseView_keyHintColor) {
+        mKeyHintColor = a.getColor(attr, 0xFFBBBBBB);
+    } else if (attr == R.styleable.LatinKeyboardBaseView_keyCursorColor) {
+        mKeyCursorColor = a.getColor(attr, 0xFF000000);
+    } else if (attr == R.styleable.LatinKeyboardBaseView_invertSymbols) {
+        mInvertSymbols = a.getBoolean(attr, false);
+    } else if (attr == R.styleable.LatinKeyboardBaseView_recolorSymbols) {
+        mRecolorSymbols = a.getBoolean(attr, false);
+    } else if (attr == R.styleable.LatinKeyboardBaseView_labelTextSize) {
+        mLabelTextSize = a.getDimensionPixelSize(attr, 14);
+    } else if (attr == R.styleable.LatinKeyboardBaseView_shadowColor) {
+        mShadowColor = a.getColor(attr, 0);
+    } else if (attr == R.styleable.LatinKeyboardBaseView_shadowRadius) {
+        mShadowRadius = a.getFloat(attr, 0f);
+    }
+    // TODO: Use Theme (android.R.styleable.Theme_backgroundDimAmount)
+    else if (attr == R.styleable.LatinKeyboardBaseView_backgroundDimAmount) {
+        mBackgroundDimAmount = a.getFloat(attr, 0.5f);
+    } else if (attr == R.styleable.LatinKeyboardBaseView_backgroundAlpha) {
+        mBackgroundAlpha = a.getInteger(attr, 255);
+    }
+    //case android.R.styleable.
+    else if (attr == R.styleable.LatinKeyboardBaseView_keyTextStyle) {
+        int textStyle = a.getInt(attr, 0);
+        if (textStyle == 0) {
+            mKeyTextStyle = Typeface.DEFAULT;
+        } else if (textStyle == 1) {
+            mKeyTextStyle = Typeface.DEFAULT_BOLD;
+        } else {
+            mKeyTextStyle = Typeface.defaultFromStyle(textStyle);
+        }
+    } else if (attr == R.styleable.LatinKeyboardBaseView_symbolColorScheme) {
+        mSymbolColorScheme = a.getInt(attr, 0);
+    }
+}
 
         final Resources res = getResources();
 
