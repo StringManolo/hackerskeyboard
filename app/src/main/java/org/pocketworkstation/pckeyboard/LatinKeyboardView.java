@@ -154,7 +154,7 @@ public class LatinKeyboardView extends LatinKeyboardBaseView {
             }
         }*//* Patch */
             if (attr == R.styleable.LatinKeyboardBaseView_keyPreviewLayout) {
-              int previewLayout = a.getResourceId(attr, 0);
+              previewLayout = a.getResourceId(attr, 0);
               if (previewLayout == R.layout.null_layout) {
                 previewLayout = 0;
               }
