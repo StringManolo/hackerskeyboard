@@ -34,14 +34,14 @@ import android.widget.TextView.BufferType;
 
 public class Main extends Activity {
 
-    private final static String MARKET_URI = "market://search?q=pub:\"Klaus Weidner\"";
+    //private final static String MARKET_URI = "market://search?q=pub:\"Klaus Weidner\"";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         String html = getString(R.string.main_body);
-        html += "<p><i>Version: " + getString(R.string.auto_version) + "</i></p>";
+        html += "<p><i>Version: 1.0.0-By-StringManolo" + /*getString(R.string.auto_version)*/ + "</i></p>";
         Spanned content = Html.fromHtml(html);
         TextView description = (TextView) findViewById(R.id.main_description);
         description.setMovementMethod(LinkMovementMethod.getInstance());
@@ -72,7 +72,7 @@ public class Main extends Activity {
             }
         });
 
-        final Button setup3 = (Button) findViewById(R.id.main_setup_btn_get_dicts);
+        /*final Button setup3 = (Button) findViewById(R.id.main_setup_btn_get_dicts);
         setup3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(MARKET_URI));
@@ -85,7 +85,7 @@ public class Main extends Activity {
                             .show();
                 }
             }
-        });
+        });*/
         // PluginManager.getPluginDictionaries(getApplicationContext()); // why?
 
         final Button setup5 = (Button) findViewById(R.id.main_setup_btn_settings);
