@@ -631,7 +631,7 @@
     <string name="prefs_debug_mode" translatable="false">Debug Mode</string>
     <string name="main_setup_configure_imes">Enable keyboard</string>
     <string name="main_setup_set_ime">Set input method</string>
-    <string name="main_setup_get_dicts">More</string>
+    <!--<string name="main_setup_get_dicts">More</string>-->
     <string name="main_setup_input_lang">Input languages</string>
     <string name="main_setup_settings">Settings</string>
     <string name="main_setup_test">Test</string>
@@ -639,7 +639,7 @@
       <![CDATA["
         <h2>Enabling Hacker's Keyboard</h2>
         
-        <p><i>Hacker's Keyboard</i> provides a new Android input method. It is <b>disabled by default</b>, and for security reasons Android doesn't allow programs to change input method settings. Please follow the following steps to activate it.<p>
+        <p>Select <i>Hacker's Keyboard</i> as the input method. It is <b>disabled by default</b>, Please follow next steps to activate it.<p>
         
         <h3>Add the keyboard to the system's input method list:</h3>
         <blockquote>
@@ -657,18 +657,11 @@
 
         <h3>Optional: Select input languages:</h3>
         <blockquote>
-          <p>&#8226; Press the <b>Input languages</b> button above to select which keyboard layouts you want to use. You <b>must</b> configure this if you want to use a language or layout other than the one corresponding to your system's default language.</p>
-          <p>&#8226; Press the <i>Back</i> button to return to this page.</p>
-          <p>&#8226; When typing, slide the space bar horizontally to switch between selected layouts.
+          <p>&#8226; Press the <b>Input languages</b> button above to select which keyboard layouts you want to use. By Default layout will use your Android's default language.
         </blockquote>
 
-        <h3>Optional: Install completion dictionary packages:</h3>
-        <blockquote>
-          <p>&#8226; Press the <b>More</b> button above to do a Play Store search for the keyboard's developer name, this will show free downloadable completion dictionary packages.</p>
-        </blockquote>
-        
         <h2>Additional information</h2>
-        <p>Please refer to the <a href='https://github.com/klausw/hackerskeyboard'>project web page</a> for more information, including the user's guide, issue tracker, and discussion group.</p>
+        <p>Source code available <a href='https://github.com/stringmanolo/hackerskeyboard'>here</a></p>
       "]]>
     </Data></string>
     <string name="text_test">Test</string>
