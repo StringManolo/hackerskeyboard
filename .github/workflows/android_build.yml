@@ -1,5 +1,3 @@
-# .github/workflows/android_build.yml
-
 name: Android CI Build
 
 on:
@@ -16,19 +14,22 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
-      
-    - name: Set up JDK 17 
+
+    - name: Set up JDK 17 for Gradle Runtime
       uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
         cache: 'gradle'
 
-    - name: Bootstrap Gradle Wrapper
-      run: gradle wrapper --gradle-version 7.4
+    - name: Bootstrap Gradle Wrapper (Genera el gradlew de 8.4)
+      run: gradle wrapper --gradle-version 8.4
 
     - name: Grant execute permission for gradlew
       run: chmod +x ./gradlew
+
+    - name: Download SDK components (Requiere AGP 8.x)
+      run: ./gradlew androidDependencies --no-daemon
 
     - name: Build with Gradle
       run: ./gradlew assembleDebug --no-daemon
