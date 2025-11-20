@@ -152,6 +152,7 @@ public class LatinKeyboard extends Keyboard {
         mVerticalGap = super.getVerticalGap();
     }
 
+    /* Original Code 
     @Override
     protected Key createKeyFromXml(Resources res, Row parent, int x, int y,
             XmlResourceParser parser) {
@@ -175,7 +176,30 @@ public class LatinKeyboard extends Keyboard {
 
         return key;
     }
+    */
+    /* Patch: */
+    @Override
+protected Key createKeyFromXml(Resources res, Row parent, int x, int y,
+        XmlResourceParser parser) {
+    Key key = new LatinKey(res, parent, x, y, parser);
+    if (key.codes == null) return key;
 
+    if (key.codes[0] == LatinIME.ASCII_ENTER) {
+        mEnterKey = key;
+    } else if (key.codes[0] == LatinKeyboardView.KEYCODE_F1) {
+        mF1Key = key;
+    } else if (key.codes[0] == LatinIME.ASCII_SPACE) {
+        mSpaceKey = key;
+    } else if (key.codes[0] == KEYCODE_MODE_CHANGE) {
+        m123Key = key;
+        m123Label = key.label;
+    }
+
+    return key;
+}
+
+
+    /* original 
     void setImeOptions(Resources res, int mode, int options) {
         mMode = mode;
         // TODO should clean up this method
@@ -224,7 +248,49 @@ public class LatinKeyboard extends Keyboard {
                 setDefaultBounds(mEnterKey.iconPreview);
             }
         }
+    }*/
+    /* Patch: */
+void setImeOptions(Resources res, int mode, int options) {
+    mMode = mode;
+    if (mEnterKey != null) {
+        mEnterKey.popupCharacters = null;
+        mEnterKey.popupResId = 0;
+        mEnterKey.text = null;
+
+        int action = options & (EditorInfo.IME_MASK_ACTION | EditorInfo.IME_FLAG_NO_ENTER_ACTION);
+
+        if (action == EditorInfo.IME_ACTION_GO) {
+            mEnterKey.iconPreview = null;
+            mEnterKey.icon = null;
+            mEnterKey.label = res.getText(R.string.label_go_key);
+        } else if (action == EditorInfo.IME_ACTION_NEXT) {
+            mEnterKey.iconPreview = null;
+            mEnterKey.icon = null;
+            mEnterKey.label = res.getText(R.string.label_next_key);
+        } else if (action == EditorInfo.IME_ACTION_DONE) {
+            mEnterKey.iconPreview = null;
+            mEnterKey.icon = null;
+            mEnterKey.label = res.getText(R.string.label_done_key);
+        } else if (action == EditorInfo.IME_ACTION_SEARCH) {
+            mEnterKey.iconPreview = res.getDrawable(R.drawable.sym_keyboard_feedback_search);
+            mEnterKey.icon = res.getDrawable(R.drawable.sym_keyboard_search);
+            mEnterKey.label = null;
+        } else if (action == EditorInfo.IME_ACTION_SEND) {
+            mEnterKey.iconPreview = null;
+            mEnterKey.icon = null;
+            mEnterKey.label = res.getText(R.string.label_send_key);
+        } else {
+            mEnterKey.iconPreview = res.getDrawable(R.drawable.sym_keyboard_feedback_return);
+            mEnterKey.icon = res.getDrawable(R.drawable.sym_keyboard_return);
+            mEnterKey.label = null;
+        }
+
+        if (mEnterKey.iconPreview != null) {
+            setDefaultBounds(mEnterKey.iconPreview);
+        }
     }
+
+
 
     void enableShiftLock() {
         int index = getShiftKeyIndex();
