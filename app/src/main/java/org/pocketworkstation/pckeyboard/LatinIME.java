@@ -17,7 +17,6 @@
 package org.pocketworkstation.pckeyboard;
 
 import org.pocketworkstation.pckeyboard.LatinIMEUtil.RingCharBuffer;
-
 import com.google.android.voiceime.VoiceRecognitionTrigger;
 
 import org.xmlpull.v1.XmlPullParserException;
@@ -45,8 +44,8 @@ import android.os.SystemClock;
 import android.os.Vibrator;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationManagerCompat;
+import androidx.core.app.NotificationCompat; // patched
+import androidx.core.app.NotificationManagerCompat; // patched
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
