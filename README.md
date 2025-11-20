@@ -1,23 +1,17 @@
-## Overview ##
+# Hacker's Keyboard (SM Version)
 
-Are you missing the key layout you're used to from your computer when using an Android device? This software keyboard has separate number keys, punctuation in the usual places, and arrow keys. It is based on the AOSP Gingerbread soft keyboard, so it supports multitouch for the modifier keys.
-
-This keyboard is especially useful if you use ConnectBot for SSH access. It provides working Tab/Ctrl/Esc keys, and the arrow keys are essential for devices such as the Xoom tablet or Nexus S that don't have a trackball or D-Pad.
-
-The supported keyboard layouts include Armenian (Հայերեն), Arabic (العربية),
-British (en\_GB), Bulgarian (български език), Czech (Čeština), Danish (dansk),
-Carpalx English (language "en-CX"), Dvorak English (language "en-DV"), English
-(QWERTY), Finnish (Suomi), French (Français, AZERTY), German (Deutsch, QWERTZ),
-German Neo2 (Deutsch, language "de-NE"),
-Greek (ελληνικά), Hebrew (עברית), Hungarian (Magyar), Italian (Italiano), Lao
-(ພາສາລາວ), Norwegian (Norsk bokmål), Persian (فارسی), Portuguese (Português),
-Romanian (Română), Russian (Русский), Russian phonetic (Русский, ru-rPH),
-Serbian (Српски), Slovak (Slovenčina), Slovenian
-(Slovenščina)/Bosnian/Croatian/Latin Serbian, Spanish (Español, Español
-Latinoamérica), Swedish (Svenska), Tamil (தமிழ்), Thai (ไทย), Turkish (Türkçe),
-and Ukrainian (українська мова).
-
-[dictionary
-packs](https://play.google.com/store/apps/developer?id=Klaus+Weidner).
+An Android Keyboard based on the AOSP Gingerbread soft keyboard. 
 
 ![hk-5row-en-s.png](hk-5row-en-s.png)
+
+## Features
+
+- Swap between Android keyboard layout and a PC keyboard layout
+- No internet connection
+- Open source 
+- Workflow to compile in the cloud
+- Default optimized settings
+
+You can compile the Keyboard just by doing a fork, make any change and push it.  
+The cloud compiled version will show up at https://github.com/your_github_username/yoit_fork_name/actions for example: https://github.com/stringmanolo/hackerskeyboard/actions. Click on the last cloud build (has your commit message) workflow and the artifact with the app-debug will show up.
+

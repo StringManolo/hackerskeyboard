@@ -41,7 +41,7 @@ public class Main extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         String html = getString(R.string.main_body);
-        html += "<p><i>Version: 1.0.0-By-StringManolo" + /*getString(R.string.auto_version)*/ + "</i></p>";
+        html += "<p><i>Version: 1.0.0-By-StringManolo" + /*getString(R.string.auto_version)*/  "</i></p>";
         Spanned content = Html.fromHtml(html);
         TextView description = (TextView) findViewById(R.id.main_description);
         description.setMovementMethod(LinkMovementMethod.getInstance());
