@@ -289,7 +289,7 @@ void setImeOptions(Resources res, int mode, int options) {
             setDefaultBounds(mEnterKey.iconPreview);
         }
     }
-
+}
 
 
     void enableShiftLock() {
