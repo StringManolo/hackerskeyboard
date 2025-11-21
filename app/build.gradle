@@ -3,15 +3,15 @@ plugins {
 }
 
 android {
-    namespace 'org.pocketworkstation.pckeyboard'
+    namespace 'com.stringmanolo.hackerskeyboard'
     compileSdkVersion 33
 
     defaultConfig {
-        applicationId 'org.pocketworkstation.pckeyboard'
+        applicationId 'com.stringmanolo.hackerskeyboard'
         minSdkVersion 14
         targetSdkVersion 33
         versionCode 1041001
-        versionName "v1.41.1"
+        versionName "v1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         externalNativeBuild {
