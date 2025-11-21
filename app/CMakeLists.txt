@@ -11,13 +11,13 @@ cmake_minimum_required(VERSION 3.4.1)
 # Gradle automatically packages shared libraries with your APK.
 
 add_library( # Sets the name of the library.
-             jni_pckeyboard
+             jni_hackerskeyboard
 
              # Sets the library as a shared library.
              SHARED
 
              # Provides a relative path to your source file(s).
-             src/main/cpp/org_pocketworkstation_pckeyboard_BinaryDictionary.cpp
+             src/main/cpp/com_stringmanolo_hackerskeyboard_BinaryDictionary.cpp
              src/main/cpp/dictionary.cpp
              src/main/cpp/char_utils.cpp )
 
@@ -39,7 +39,7 @@ find_library( # Sets the name of the path variable.
 # build script, prebuilt third-party libraries, or system libraries.
 
 target_link_libraries( # Specifies the target library.
-                       jni_pckeyboard
+                       jni_hackerskeyboard
 
                        # Links the target library to the log library
                        # included in the NDK.

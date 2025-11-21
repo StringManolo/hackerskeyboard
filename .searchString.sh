@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define el string a buscar
-SEARCH_STRING="org.pocketworkstation.pckeyboard"
+SEARCH_STRING="com.stringmanolo.hackerskeyboard"
 
 # Define el directorio base de búsqueda
 SEARCH_DIR="./"
