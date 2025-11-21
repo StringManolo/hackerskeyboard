@@ -12,6 +12,9 @@ An Android Keyboard based on the AOSP Gingerbread soft keyboard.
 - Workflow to compile in the cloud
 - Default optimized settings
 
+### How to compile from source
+
+##### Fast and easy
 You can compile the Keyboard just by doing a fork, make any change and push it.  
   
 The cloud compiled version will show up at `https://github.com/your_github_username/yout_fork_name/actions` for example:  
@@ -20,4 +23,9 @@ The cloud compiled version will show up at `https://github.com/your_github_usern
 Click on the last cloud build (has your commit message) workflow and the artifact with the app-debug.zip will show up.  
   
 Extract and install the app-debug.apk inside.
+
+##### Other ways
+You can also compile it in your prefered way, for example importing it into Android Studio, or from your terminal, etc.
+
+
 
