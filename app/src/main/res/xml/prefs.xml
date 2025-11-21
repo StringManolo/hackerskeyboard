@@ -99,7 +99,7 @@
             android:persistent="true"
             android:entryValues="@array/voice_input_modes_values"
             android:entries="@array/voice_input_modes"
-            android:defaultValue="@string/voice_mode_symbols"
+            android:defaultValue="@string/voice_mode_off"
             />
 
     <PreferenceScreen
@@ -240,7 +240,7 @@
             android:key="show_suggestions"
             android:title="@string/show_suggestions"
             android:summary="@string/show_suggestions_summary"
-            android:persistent="true"
+            android:persistent="false"
             android:defaultValue="@bool/default_suggestions"
             />
 
