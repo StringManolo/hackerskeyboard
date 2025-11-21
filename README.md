@@ -1,5 +1,5 @@
-# Hackers Keyboard (SM) &nbsp; &nbsp; &nbsp; &nbsp; [![Download Hackers Keyboard SM](https://img.shields.io/badge/Download-Hackers%20Keyboard%20\(SM\)-blue)](https://github.com/StringManolo/hackerskeyboard/releases/download/V1.0.1/hackerskeyboardsm_stable_ver.1.0.1.apk)
-
+# Hackers Keyboard (SM) &nbsp; &nbsp; &nbsp; &nbsp; [![Download Hackers Keyboard SM](https://img.shields.io/badge/Download-Hackers%20Keyboard%20\(SM\)-blue)]
+(https://github.com/StringManolo/hackerskeyboard/releases/download/1.0.0/hackerskeyboardsm_stable_ver.1.0.1.apk)
 
 An Android Keyboard based on the AOSP Gingerbread soft keyboard. 
 
