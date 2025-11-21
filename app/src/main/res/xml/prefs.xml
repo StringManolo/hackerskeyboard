@@ -240,18 +240,20 @@
             android:key="show_suggestions"
             android:title="@string/show_suggestions"
             android:summary="@string/show_suggestions_summary"
-            android:persistent="false"
-            android:defaultValue="@bool/default_suggestions"
-            />
+            android:persistent="true"
+            android:defaultValue="false"
+          />
+        <!--"@bool/default_suggestions"-->
 
         <CheckBoxPreference
             android:key="auto_complete"
             android:title="@string/auto_complete"
             android:summary="@string/auto_complete_summary"
             android:persistent="true" 
-            android:defaultValue="@bool/enable_autocorrect"
+            android:defaultValue="false"
             android:dependency="show_suggestions"
-            />
+          />
+        <!-- "android:defaultValue="@bool/enable_autocorrect" -->
 
         <com.stringmanolo.hackerskeyboard.AutoSummaryEditTextPreference
             android:key="pref_suggested_punctuation"
