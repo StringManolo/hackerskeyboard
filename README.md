@@ -12,6 +12,10 @@ An Android Keyboard based on the AOSP Gingerbread soft keyboard.
 - Workflow to compile in the cloud
 - Default optimized settings
 
+## Demo
+
+https://github.com/user-attachments/assets/e18e7dd4-c82a-40b7-8e51-ffc9a175fc13
+
 ### How to compile from source
 
 ##### Fast and easy
@@ -26,6 +30,3 @@ Extract and install the app-debug.apk inside.
 
 ##### Other ways
 You can also compile it in your prefered way, for example importing it into Android Studio, or from your terminal, etc.
-
-
-
